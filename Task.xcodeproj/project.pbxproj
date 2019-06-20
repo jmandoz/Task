@@ -18,6 +18,7 @@
 		A4C9CAB822BADD41006E785F /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CAB722BADD41006E785F /* Task+Convenience.swift */; };
 		A4C9CABB22BAE02A006E785F /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CABA22BAE02A006E785F /* TaskController.swift */; };
 		A4C9CABE22BB0154006E785F /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CABD22BB0154006E785F /* DateHelpers.swift */; };
+		A4C9CAC022BB13FE006E785F /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CABF22BB13FE006E785F /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A4C9CAB722BADD41006E785F /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		A4C9CABA22BAE02A006E785F /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		A4C9CABD22BB0154006E785F /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		A4C9CABF22BB13FE006E785F /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				A4C9CAB022BAD6A7006E785F /* TaskListTableViewController.swift */,
 				A4C9CAB322BADBCE006E785F /* TaskDetailTableViewController.swift */,
+				A4C9CABF22BB13FE006E785F /* ButtonTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C9CAC022BB13FE006E785F /* ButtonTableViewCell.swift in Sources */,
 				A4C9CABB22BAE02A006E785F /* TaskController.swift in Sources */,
 				A4C9CAA422BAD451006E785F /* Task.xcdatamodeld in Sources */,
 				A4C9CAB122BAD6A7006E785F /* TaskListTableViewController.swift in Sources */,

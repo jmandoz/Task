@@ -18,31 +18,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" textLabel="y43-fV-mqC" detailTextLabel="1HS-UA-FVx" style="IBUITableViewCellStyleValue1" id="rmy-N8-bqY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="rmy-N8-bqY" customClass="ButtonTableViewCell" customModule="Task" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rmy-N8-bqY" id="LeN-nG-IZc">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y43-fV-mqC">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1HS-UA-FVx">
-                                            <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-ca-MEe">
+                                            <rect key="frame" x="365" y="5" width="41" height="34"/>
+                                            <connections>
+                                                <action selector="buttonTapped:" destination="rmy-N8-bqY" eventType="touchUpInside" id="Y5P-dl-xmJ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAy-hY-st8">
+                                            <rect key="frame" x="8" y="5" width="230" height="34"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IAy-hY-st8" firstAttribute="leading" secondItem="LeN-nG-IZc" secondAttribute="leading" constant="8" id="21W-VW-bik"/>
+                                        <constraint firstItem="Spg-ca-MEe" firstAttribute="leading" secondItem="IAy-hY-st8" secondAttribute="trailing" constant="158" id="AOs-VT-8Or"/>
+                                        <constraint firstAttribute="trailing" secondItem="Spg-ca-MEe" secondAttribute="trailing" constant="8" id="Ax3-gB-oPZ"/>
+                                        <constraint firstItem="IAy-hY-st8" firstAttribute="top" secondItem="LeN-nG-IZc" secondAttribute="top" constant="5" id="FEV-Zj-ouv"/>
+                                        <constraint firstItem="Spg-ca-MEe" firstAttribute="top" secondItem="IAy-hY-st8" secondAttribute="top" id="GON-cn-ZSi"/>
+                                        <constraint firstAttribute="bottom" secondItem="IAy-hY-st8" secondAttribute="bottom" constant="5" id="ghd-Dy-3oy"/>
+                                        <constraint firstItem="Spg-ca-MEe" firstAttribute="bottom" secondItem="IAy-hY-st8" secondAttribute="bottom" id="tL6-Ib-7jO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="rGD-cb-ig2" kind="show" id="qns-Yl-3pJ"/>
+                                    <outlet property="completeButton" destination="Spg-ca-MEe" id="jT8-R5-2Av"/>
+                                    <outlet property="primaryLabel" destination="IAy-hY-st8" id="pnw-k1-D3Z"/>
+                                    <segue destination="rGD-cb-ig2" kind="show" identifier="toTaskDetailVC" id="qns-Yl-3pJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -174,12 +183,28 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dueDatePicker" destination="Etb-Kp-AGa" id="26b-xV-7J7"/>
                         <outlet property="taskDueDateTextField" destination="DLi-XX-T5o" id="NpV-co-DGD"/>
                         <outlet property="taskNameTextField" destination="cBc-bc-BT6" id="8IW-fR-vea"/>
                         <outlet property="taskNotesTextView" destination="2SB-tJ-tXA" id="9cR-9p-Pif"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IqH-qS-C9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XLB-nU-79q">
+                    <connections>
+                        <action selector="userTappedView:" destination="rGD-cb-ig2" id="a53-GU-bUe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="Etb-Kp-AGa">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="582682680.21737897">
+                        <!--2019-06-20 00:18:00 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="datePickerValueChanged:" destination="rGD-cb-ig2" eventType="valueChanged" id="cTI-tf-ZCv"/>
+                    </connections>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="1847.826086956522" y="125.89285714285714"/>
         </scene>
@@ -203,6 +228,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="evB-sq-D5R"/>
+        <segue reference="qns-Yl-3pJ"/>
     </inferredMetricsTieBreakers>
 </document>

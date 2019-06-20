@@ -16,11 +16,24 @@ class TaskDetailTableViewController: UITableViewController {
     
     @IBOutlet weak var taskNotesTextView: UITextView!
     
+    @IBOutlet var dueDatePicker: UIDatePicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        taskDueDateTextField.inputView = dueDatePicker
     }
 
+    @IBAction func datePickerValueChanged(_ sender: UIDatePicker) {
+        self.taskDueDateTextField.text = sender.date.stringValue()
+        self.dueDateValue = sender.date
+    }
+    
+    @IBAction func userTappedView(_ sender: Any) {
+        self.taskNameTextField.resignFirstResponder()
+        self.taskDueDateTextField.resignFirstResponder()
+        self.taskNotesTextView.resignFirstResponder()
+    }
+    
     @IBAction func saveButtonTapped(_ sender: Any) {
         updateTask()
         let _ = navigationController?.popViewController(animated: true)
