@@ -17,6 +17,7 @@
 		A4C9CAB622BADC18006E785F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CAB522BADC18006E785F /* CoreDataStack.swift */; };
 		A4C9CAB822BADD41006E785F /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CAB722BADD41006E785F /* Task+Convenience.swift */; };
 		A4C9CABB22BAE02A006E785F /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CABA22BAE02A006E785F /* TaskController.swift */; };
+		A4C9CABE22BB0154006E785F /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C9CABD22BB0154006E785F /* DateHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A4C9CAB522BADC18006E785F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		A4C9CAB722BADD41006E785F /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		A4C9CABA22BAE02A006E785F /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
+		A4C9CABD22BB0154006E785F /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				A4C9CAA222BAD451006E785F /* Task.xcdatamodeld */,
 				A4C9CAB722BADD41006E785F /* Task+Convenience.swift */,
 				A4C9CABA22BAE02A006E785F /* TaskController.swift */,
+				A4C9CABD22BB0154006E785F /* DateHelpers.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				A4C9CAB122BAD6A7006E785F /* TaskListTableViewController.swift in Sources */,
 				A4C9CAB822BADD41006E785F /* Task+Convenience.swift in Sources */,
 				A4C9CAB622BADC18006E785F /* CoreDataStack.swift in Sources */,
+				A4C9CABE22BB0154006E785F /* DateHelpers.swift in Sources */,
 				A4C9CAB422BADBCE006E785F /* TaskDetailTableViewController.swift in Sources */,
 				A4C9CA9C22BAD451006E785F /* AppDelegate.swift in Sources */,
 			);
@@ -328,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

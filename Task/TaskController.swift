@@ -13,16 +13,19 @@ import CoreData
 class TaskController {
     
     //Shared Instance
-    static var shared = TaskController()
+    static let shared = TaskController()
     
     //Source of Truth
-    var tasks: [Task?] = []
+    var tasks: [Task] {
+        let request: NSFetchRequest<Task> = Task.fetchRequest()
+        return (try? CoreDataStack.context.fetch(request)) ?? []
+    }
     
     func add(taskWithName name: String, notes: String?, due: Date?) {
         
     }
     
-    func update(task: Task, name: String?, due: Date?) {
+    func update(task: Task, name: String, notes: String?, due: Date?) {
         
     }
     
@@ -34,8 +37,5 @@ class TaskController {
     
     }
     
-    func fetchTasks() -> [Task] {
-        
-    }
     
 }
