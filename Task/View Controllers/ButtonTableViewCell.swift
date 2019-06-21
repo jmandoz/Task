@@ -30,8 +30,11 @@ class ButtonTableViewCell: UITableViewCell {
     }
     
     fileprivate func updateButton(_ isComplete: Bool) {
-        let imageName = isComplete ? "complete" : "incomplete"
-        completeButton.setImage(UIImage(named: imageName), for: .normal)
+        if isComplete {
+        completeButton.setImage(UIImage(named: "complete"), for: .normal)
+    } else {
+        completeButton.setImage(UIImage(named: "incomplete"), for: .normal)
+        }
     }
 }
 
@@ -43,5 +46,6 @@ extension ButtonTableViewCell {
     func update(withTask task: Task) {
     primaryLabel.text = task.name
     updateButton(task.isComplete)
-    }
+        }
 }
+

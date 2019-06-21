@@ -21,12 +21,16 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="rmy-N8-bqY" customClass="ButtonTableViewCell" customModule="Task" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rmy-N8-bqY" id="LeN-nG-IZc">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rmy-N8-bqY" id="LeN-nG-IZc">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-ca-MEe">
-                                            <rect key="frame" x="365" y="5" width="41" height="34"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-ca-MEe">
+                                            <rect key="frame" x="362" y="5" width="44" height="44.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="67G-9l-a6Y"/>
+                                                <constraint firstAttribute="width" constant="44" id="7PB-Vl-ljy"/>
+                                            </constraints>
                                             <connections>
                                                 <action selector="buttonTapped:" destination="rmy-N8-bqY" eventType="touchUpInside" id="Y5P-dl-xmJ"/>
                                             </connections>
